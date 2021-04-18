@@ -1,0 +1,146 @@
+@import "../../../styles/styles.scss";
+.first-section-container {
+  background: rgb(50, 50, 50);
+  background: linear-gradient(
+    90deg,
+    rgba(50, 50, 50, 1) 5%,
+    rgb(27, 27, 27) 42%,
+    rgb(19, 19, 19) 77%
+  );
+  position: relative;
+
+  .top-triangle {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: #2491a5;
+    transform: translateY(-5vh);
+    clip-path: polygon(0 50%, 75% 50%, 40% 0, 0 0);
+    z-index: -1;
+    @include media-breakpoint-down(sm) {
+      clip-path: polygon(0 50%, 100% 50%, 50% 0, 0 0);
+    }
+  }
+
+  .content {
+    &__join-us {
+      color: white;
+    }
+    button:active {
+      color: rgb(45, 220, 255);
+      border: 1px solid #2491a5;
+    }
+    button:focus {
+      color: rgb(45, 220, 255);
+      border: 1px solid #2491a5;
+    }
+    &__sign-in {
+      background: rgb(50, 50, 50);
+
+      border: 1px solid rgb(19, 19, 19);
+      transition: 2s;
+      border-radius: 0.5vw;
+    }
+    &__sign-in:hover {
+      background: rgb(50, 50, 50);
+      color: rgb(45, 220, 255);
+      border: 1px solid #2491a5;
+    }
+    &__sign-up {
+      background: rgb(50, 50, 50);
+      border: 1px solid rgb(19, 19, 19);
+      transition: 2s;
+      border-radius: 0.5vw;
+    }
+    &__sign-up:hover {
+      background: rgb(50, 50, 50);
+      color: rgb(45, 220, 255);
+      border: 1px solid #2491a5;
+    }
+    .title {
+      &__content {
+        color: white;
+        font-size: 40px;
+        margin-right: 12px;
+      }
+
+      &__content--us {
+        color: #efca08;
+        transform: skewY(-10deg);
+        transition: 0.5s;
+      }
+      &__content--your {
+        color: #78def0;
+        transform: skewY(-10deg);
+        transition: 0.5s;
+      }
+    }
+    .title:hover .title__content--us {
+      transform: skewY(0deg);
+    }
+    .title:hover .title__content--your {
+      transform: skewY(0deg);
+    }
+  }
+
+  .fake-row {
+    height: 20vh;
+  }
+  h1 {
+    color: white;
+  }
+  h2 {
+    color: white;
+  }
+  h3 {
+    color: white;
+  }
+  h4 {
+    color: white;
+  }
+  .bottom-triangle {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    width: 100vw;
+    height: 100%;
+    background-color: #2491a5;
+    clip-path: polygon(25% 50%, 100% 50%, 100% 100%, 60% 100%);
+    transform: translateY(5vh);
+    z-index: -1;
+    color: white;
+    float: right;
+    bottom: 0;
+    @include media-breakpoint-down(sm) {
+      clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 50% 100%);
+    }
+  }
+  .our-partners {
+    position: absolute;
+    left: 65vw;
+    bottom: -5vh;
+    color: white;
+    @include media-breakpoint-down(sm) {
+      font-size: 20px;
+    }
+  }
+  .partners-container {
+    position: absolute;
+    left: 0vw;
+    bottom: -5vh;
+    height: 5vh;
+    width: 60vw;
+    color: white;
+    align-items: center;
+    z-index: -2;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    &__partner {
+      color: grey;
+      margin-left: 2.5vw;
+    }
+  }
+}
+// #2491a5

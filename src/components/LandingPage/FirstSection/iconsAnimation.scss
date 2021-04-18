@@ -1,0 +1,279 @@
+@import "../../../styles/styles.scss";
+.first-section-container {
+  .content {
+    .icons-container {
+      .box-container {
+        position: absolute;
+        bottom: -57px;
+      }
+      @include media-breakpoint-down(md) {
+        height: 30vh;
+      }
+
+      svg {
+        cursor: pointer;
+      }
+      svg:hover {
+      }
+      .boxIcon {
+        color: white;
+        z-index: 20;
+        animation: jump 1s;
+        border-radius: 5px solid transparent;
+        animation-iteration-count: 16;
+      }
+
+      .fa-linkedin {
+        animation: layer-1-animation 1s cubic-bezier(0.215, 0.61, 0.355, 1)
+          forwards 1;
+      }
+      svg:nth-child(2) {
+        animation: layer-2-animation 0.75s cubic-bezier(0.215, 0.61, 0.355, 1)
+          forwards 1;
+        z-index: 2;
+        opacity: 0;
+      }
+      svg:nth-child(3) {
+        animation: layer-3-animation 0.75s cubic-bezier(0.215, 0.61, 0.355, 1)
+          forwards 1;
+        z-index: 3;
+        opacity: 0;
+      }
+      svg:nth-child(4) {
+        animation: layer-4-animation 0.75s cubic-bezier(0.215, 0.61, 0.355, 1)
+          forwards 1;
+        z-index: 4;
+        animation-delay: 1s;
+        opacity: 0;
+      }
+      svg:nth-child(5) {
+        animation: layer-5-animation 0.75s cubic-bezier(0.215, 0.61, 0.355, 1)
+          forwards 1;
+        z-index: 5;
+        animation-delay: 2s;
+        opacity: 0;
+      }
+      svg:nth-child(6) {
+        animation: layer-6-animation 0.75s cubic-bezier(0.215, 0.61, 0.355, 1)
+          forwards 1;
+        z-index: 6;
+        animation-delay: 3s;
+        opacity: 0;
+      }
+      svg:nth-child(7) {
+        animation: layer-7-animation 0.75s cubic-bezier(0.215, 0.61, 0.355, 1)
+          forwards 1;
+        z-index: 7;
+        animation-delay: 4s;
+        opacity: 0;
+      }
+      svg:nth-child(8) {
+        animation: layer-8-animation 0.75s cubic-bezier(0.215, 0.61, 0.355, 1)
+          forwards 1;
+        z-index: 8;
+        animation-delay: 5s;
+        opacity: 0;
+      }
+      svg:nth-child(9) {
+        animation: layer-9-animation 0.75s cubic-bezier(0.215, 0.61, 0.355, 1)
+          forwards 1;
+        z-index: 9;
+        animation-delay: 6s;
+        opacity: 0;
+      }
+      svg:nth-child(10) {
+        animation: layer-10-animation 0.75s cubic-bezier(0.215, 0.61, 0.355, 1)
+          forwards 1;
+        z-index: 10;
+        animation-delay: 7s;
+        opacity: 0;
+      }
+      svg:nth-child(11) {
+        animation: layer-11-animation 0.75s cubic-bezier(0.215, 0.61, 0.355, 1)
+          forwards 1;
+        z-index: 11;
+        animation-delay: 8s;
+        opacity: 0;
+      }
+      svg:nth-child(12) {
+        animation: layer-12-animation 0.75s cubic-bezier(0.215, 0.61, 0.355, 1)
+          forwards 1;
+        z-index: 12;
+        animation-delay: 9s;
+        opacity: 0;
+      }
+      svg:nth-child(13) {
+        animation: layer-13-animation 0.75s cubic-bezier(0.215, 0.61, 0.355, 1)
+          forwards 1;
+        z-index: 13;
+        animation-delay: 10s;
+        opacity: 0;
+      }
+      svg:nth-child(14) {
+        animation: layer-14-animation 0.75s cubic-bezier(0.215, 0.61, 0.355, 1)
+          forwards 1;
+        z-index: 14;
+        animation-delay: 11s;
+        opacity: 0;
+      }
+      svg:nth-child(15) {
+        animation: layer-15-animation 0.75s cubic-bezier(0.215, 0.61, 0.355, 1)
+          forwards 1;
+        z-index: 15;
+        animation-delay: 12s;
+        opacity: 0;
+      }
+      svg:nth-child(16) {
+        animation: layer-16-animation 0.75s cubic-bezier(0.215, 0.61, 0.355, 1)
+          forwards 1;
+        z-index: 16;
+        animation-delay: 13s;
+        opacity: 0;
+      }
+      svg:nth-child(17) {
+        animation: layer-17-animation 0.75s cubic-bezier(0.215, 0.61, 0.355, 1)
+          forwards 1;
+        z-index: 17;
+        animation-delay: 14s;
+        opacity: 0;
+      }
+      svg:nth-child(18) {
+        animation: layer-18-animation 0.75s cubic-bezier(0.215, 0.61, 0.355, 1)
+          forwards 1;
+        z-index: 18;
+        animation-delay: 15s;
+        opacity: 0;
+      }
+    }
+    .icons-container:hover {
+      animation: shake 1s infinite;
+    }
+  }
+}
+@keyframes shake {
+  50% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes jump {
+  100% {
+    transform: translateY(5px);
+  }
+}
+@keyframes layer-1-animation {
+  100% {
+    transform: translate(-15px, -103px) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes layer-2-animation {
+  100% {
+    transform: translate(-43px, -75px) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes layer-3-animation {
+  100% {
+    transform: translate(21px, -85px) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes layer-4-animation {
+  100% {
+    transform: translate(-104px, -107px) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes layer-5-animation {
+  100% {
+    transform: translate(95px, -102px) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes layer-6-animation {
+  100% {
+    transform: translate(-155px, -120px) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes layer-7-animation {
+  100% {
+    transform: translate(170px, -123px) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes layer-8-animation {
+  100% {
+    transform: translate(152px, -220px) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes layer-9-animation {
+  100% {
+    transform: translate(-176px, -190px) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes layer-10-animation {
+  100% {
+    transform: translate(104px, -190px) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes layer-11-animation {
+  100% {
+    transform: translate(-203px, -150px) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes layer-12-animation {
+  100% {
+    transform: translate(16px, -131px) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes layer-13-animation {
+  100% {
+    transform: translate(-16px, -170px) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes layer-14-animation {
+  100% {
+    transform: translate(43px, -190px) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes layer-15-animation {
+  100% {
+    transform: translate(-49px, -155px) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes layer-16-animation {
+  100% {
+    transform: translate(115px, -130px) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes layer-17-animation {
+  100% {
+    transform: translate(-125px, -180px) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes layer-18-animation {
+  100% {
+    transform: translate(-125px, -200px) translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes layer-19-animation {
+  100% {
+    transform: translate(50px, -150px) translateZ(0);
+    opacity: 1;
+  }
+}
