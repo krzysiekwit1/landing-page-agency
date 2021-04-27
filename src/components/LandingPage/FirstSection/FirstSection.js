@@ -63,9 +63,9 @@ const setIconProp = () => {
     .offsetWidth
   iconsArray.map(function (icon, index) {
     //colors
-    icon.r = 50 //Math.floor(Math.random() * 50) + 0
+    icon.r = 50
     icon.g = Math.floor(Math.random() * 168) + 50
-    icon.b = 168 //Math.floor(Math.random() * 168) + 0
+    icon.b = 168
     //positions
     icon.positionX = iconsContainerWidth / 2 - 15
     icon.positionY = iconsContainerHeight - 10
@@ -82,7 +82,6 @@ const changeIconColor = (e, pastColor) => {
 
 const FirstSection = () => {
   const [iconsSet, setIconsSet] = useState(false)
-
   useEffect(() => {
     setIconProp()
     setIconsSet(true)
@@ -91,9 +90,8 @@ const FirstSection = () => {
 
   return (
     <>
-      <Row className="first-section-container mt-5">
+      <Row className="first-section-container mt-5" id="firstSection">
         <div className="top-triangle"></div>
-
         <Container fluid="lg" className="content">
           <Row className="pt-5 py-1 px-3 px-lg-0">
             <Col

@@ -1,5 +1,18 @@
+@import "../../../styles/styles.scss";
 .navbar {
-  .navbar-brand {
+  #logo {
     padding-top: 0px !important;
+    font-size: 30px;
+    color: $color-white;
+  }
+  .navbar-collapse {
+    .navbar-nav {
+      a {
+        color: black;
+      }
+      .nav-link-dark {
+        color: $color-white !important;
+      }
+    }
   }
 }

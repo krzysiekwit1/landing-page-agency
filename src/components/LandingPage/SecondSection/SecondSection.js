@@ -50,7 +50,7 @@ const SecondSection = () => {
   }, [])
 
   return (
-    <Row className="second-section-container pb-5">
+    <Row className="second-section-container pb-5" id="secondSection">
       <Container fluid="md">
         <FirstElement elementRevealed={elementRevealed} />
         <SecondElement elementRevealed={elementRevealed} />

@@ -26,13 +26,13 @@ const ThirdSection = () => {
     }
     gsap.set(partners, {
       x: function (i) {
-        return i * partnerWidth // starting position for every testimonial
+        return i * partnerWidth
       },
     })
     const totalRowWidth = partnerWidth * partners.length
-    const mod = gsap.utils.wrap(0, totalRowWidth) // x position after full cycle
+    const mod = gsap.utils.wrap(0, totalRowWidth)
     const slideAnimation = gsap.to(partners, {
-      x: "+=" + totalRowWidth, // distance for every testimonial
+      x: "+=" + totalRowWidth,
       modifiers: {
         x: x => mod(parseFloat(x)) + "px",
       },
@@ -59,7 +59,7 @@ const ThirdSection = () => {
       <Row className="d-flex justify-content-center third-section-container-title pt-5">
         <h1> Our Contributors</h1>
       </Row>
-      <Row className="third-section-container">
+      <Row className="third-section-container" id="thirdSection">
         <div className="partners-container" ref={partnersRef}>
           <div className="partner-container">
             <div className="image-container">

@@ -1,6 +1,48 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Navbar, Nav } from "react-bootstrap"
-const navBar = () => {
+import "./navBar.scss"
+
+const NavBar = () => {
+  const [navbarLight, setNavbarLight] = useState(false)
+  useEffect(() => {
+    window.addEventListener("scroll", event => {
+      const scrollHeight = window.scrollY
+      const windowHeight = window.innerHeight
+      const firstSectionHeight = document.getElementById("firstSection")
+        .offsetTop
+      const secondSectionHeight = document.getElementById("secondSection")
+        .offsetTop
+      const thirdSectionHeight = document.getElementById("thirdSection")
+        .offsetTop
+      const fourthSectionHeight = document.getElementById("fourthSection")
+        .offsetTop
+
+      switch (true) {
+        case scrollHeight > firstSectionHeight &&
+          scrollHeight < secondSectionHeight - windowHeight * 0.1:
+          setNavbarLight(true)
+          break
+        case scrollHeight >= secondSectionHeight - windowHeight * 0.1 &&
+          scrollHeight < secondSectionHeight:
+          setNavbarLight(false)
+          console.log("biala przerwa")
+          break
+        case scrollHeight >= secondSectionHeight &&
+          scrollHeight < thirdSectionHeight:
+          setNavbarLight(true)
+          console.log("druga sekcja")
+          break
+        case scrollHeight > thirdSectionHeight:
+          setNavbarLight(true)
+          console.log("trzecia sekcja")
+          break
+        default:
+          setNavbarLight(false)
+          break
+      }
+    })
+  }, [])
+
   return (
     <Navbar
       fixed="top"
@@ -8,16 +50,16 @@ const navBar = () => {
       expand="sm"
       className="navbar pt-0 pl-5"
     >
-      <Navbar.Brand href="#home" style={{ color: "white", fontSize: "30px" }}>
+      <Navbar.Brand href="#home" id="logo">
         Logo
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link href="#home" style={{ color: "black" }}>
+          <Nav.Link href="#home" className={navbarLight && "nav-link-dark"}>
             Home
           </Nav.Link>
-          <Nav.Link href="#link" style={{ color: "black" }}>
+          <Nav.Link href="#link" className={navbarLight && "nav-link-dark"}>
             Link
           </Nav.Link>
         </Nav>
@@ -26,4 +68,4 @@ const navBar = () => {
   )
 }
 
-export default navBar
+export default NavBar
