@@ -14,8 +14,6 @@ const NavBar = () => {
         .offsetTop
       const thirdSectionHeight = document.getElementById("thirdSection")
         .offsetTop
-      const fourthSectionHeight = document.getElementById("fourthSection")
-        .offsetTop
 
       switch (true) {
         case scrollHeight > firstSectionHeight &&
@@ -53,14 +51,17 @@ const NavBar = () => {
       <Navbar.Brand href="#home" id="logo">
         Logo
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Toggle
+        aria-controls="basic-navbar-nav"
+        className={navbarLight && "navbar-toggle-light"}
+      />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <Nav.Link href="#home" className={navbarLight && "nav-link-dark"}>
-            Home
+            Contact
           </Nav.Link>
           <Nav.Link href="#link" className={navbarLight && "nav-link-dark"}>
-            Link
+            Our Team
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>

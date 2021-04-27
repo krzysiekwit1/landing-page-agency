@@ -5,6 +5,7 @@ import FirstSection from "../components/LandingPage/FirstSection/FirstSection"
 import SecondSection from "../components/LandingPage/SecondSection/SecondSection"
 import ThirdSection from "../components/LandingPage/ThirdSection/ThirdSection"
 import FourthSection from "../components/LandingPage/FourthSection/FourthSection"
+import Footer from "../components/LandingPage/Footer/Footer"
 
 class landing extends Component {
   componentDidMount() {}
@@ -26,6 +27,7 @@ class landing extends Component {
         <SecondSection />
         <ThirdSection />
         <FourthSection />
+        <Footer />
       </>
     )
   }
