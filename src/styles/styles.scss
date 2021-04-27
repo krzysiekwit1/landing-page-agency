@@ -1,6 +1,10 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap);
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
-
+$color-black: rgb(0, 0, 0);
+$color-backgroundGrey: rgb(50, 50, 50);
+$color-white: rgb(255, 255, 255);
+$color-turqoise: #2491a5;
+$color-gold: #efca08;
 * {
   margin: 0;
   padding: 0;

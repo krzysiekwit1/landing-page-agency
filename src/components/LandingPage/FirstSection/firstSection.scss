@@ -1,4 +1,7 @@
 @import "../../../styles/styles.scss";
+body {
+  overflow-x: hidden;
+}
 .first-section-container {
   background: rgb(50, 50, 50);
   background: linear-gradient(
@@ -131,7 +134,7 @@
     left: 0vw;
     bottom: -5vh;
     height: 5vh;
-    width: 60vw;
+    width: 65vw;
     color: white;
     align-items: center;
     z-index: -2;

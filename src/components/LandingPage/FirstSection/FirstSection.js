@@ -1,3 +1,4 @@
+import ReactDOM from "react-dom"
 import React, { useEffect, useState } from "react"
 import { Row, Col, Button, Container } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -23,6 +24,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import {
   faBoxOpen,
+  faBox,
   faCopyright,
   faAddressBook,
   faAmbulance,
@@ -64,9 +66,7 @@ const setIconProp = () => {
     icon.r = 50 //Math.floor(Math.random() * 50) + 0
     icon.g = Math.floor(Math.random() * 168) + 50
     icon.b = 168 //Math.floor(Math.random() * 168) + 0
-    console.log(index)
     //positions
-    console.log(Math.random())
     icon.positionX = iconsContainerWidth / 2 - 15
     icon.positionY = iconsContainerHeight - 10
   })
@@ -87,10 +87,6 @@ const FirstSection = () => {
     setIconProp()
     setIconsSet(true)
     window.addEventListener("resize", setIconProp())
-    window.addEventListener("resize", function () {
-      console.log(window.innerWidth)
-      console.log(document.getElementById("iconsContainer").offsetHeight)
-    })
   }, [])
 
   return (
@@ -139,8 +135,8 @@ const FirstSection = () => {
               </Row>
               <Row className="text-center text-md-left">
                 <h4 className="pt-3">
-                  Let us create best promotion personalized for you, you'll get
-                  best verified influencers. Make your brand recognizable.
+                  Let us create best advertisment personalized for you, you'll
+                  get best verified influencers. Make your brand recognizable.
                 </h4>
               </Row>
             </Col>
@@ -170,6 +166,7 @@ const FirstSection = () => {
                 ))}
               <Row className="box-container d-flex justify-content-center w-100">
                 <FontAwesomeIcon
+                  id="box"
                   className="boxIcon"
                   icon={faBoxOpen}
                   size="5x"

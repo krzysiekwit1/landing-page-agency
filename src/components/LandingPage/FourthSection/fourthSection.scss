@@ -1,0 +1,40 @@
+@import "../../../styles/styles.scss";
+
+.fourth-section-container {
+  background-color: $color-backgroundGrey;
+  background: linear-gradient(
+    90deg,
+    rgba(50, 50, 50, 1) 5%,
+    rgb(27, 27, 27) 42%,
+    rgb(19, 19, 19) 77%
+  );
+  .left-container {
+    z-index: 2;
+    h2,
+    h5 {
+      color: white;
+    }
+  }
+  .right-container {
+    z-index: 3;
+    position: relative;
+    perspective: 8000;
+    &__button {
+      width: 50%;
+      transition: 1s;
+      background-color: transparent;
+      border: 1px solid $color-turqoise;
+      color: $color-gold;
+      height: 75px;
+      &:hover {
+        color: $color-white;
+        border: 1px solid $color-gold;
+      }
+      &:active {
+        background-color: transparent !important;
+      }
+    }
+  }
+  .right-container__button:hover {
+  }
+}

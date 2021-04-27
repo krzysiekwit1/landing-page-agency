@@ -1,0 +1,88 @@
+@import "../../../styles/styles.scss";
+.third-section-container-title {
+  color: $color-turqoise;
+}
+.third-section-container {
+  width: 160vw;
+  height: 25vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  @include media-breakpoint-down(xs) {
+    height: 15vh;
+  }
+  transform: translateX(-30vw);
+
+  .partners-container {
+    .partner-container {
+      position: absolute;
+      width: 17vw;
+      border: 1px solid transparent;
+      padding-top: 1vh;
+      border-radius: 15px;
+
+      @include media-breakpoint-down(lg) {
+        width: 20vw;
+      }
+      @include media-breakpoint-down(md) {
+        width: 25vw;
+      }
+      @include media-breakpoint-down(sm) {
+        height: 120px;
+        width: 30vw;
+      }
+      @include media-breakpoint-down(xs) {
+        height: 120px;
+        width: 35vw;
+      }
+
+      .image-container {
+        display: flex;
+        justify-content: center;
+        &__img {
+          width: 85px;
+          height: 85px;
+          border: 2px solid $color-black;
+          border-radius: 50%;
+          @include media-breakpoint-down(lg) {
+            width: 70px;
+            height: 70px;
+          }
+          @include media-breakpoint-down(md) {
+            width: 60px;
+            height: 60px;
+          }
+          @include media-breakpoint-down(sm) {
+            width: 55px;
+            height: 55px;
+          }
+          @include media-breakpoint-down(xs) {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+      .description-container {
+        text-align: center;
+        &__nick {
+          color: $color-black;
+          width: 100%;
+          @include media-breakpoint-down(xs) {
+            font-size: 1rem;
+          }
+        }
+        &__sub-count {
+          width: 100%;
+          color: $color-black;
+          @include media-breakpoint-down(xs) {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    .partner-container:hover {
+      position: absolute;
+      border: 1px solid #525252;
+      opacity: 0.9;
+    }
+  }
+}

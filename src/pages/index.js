@@ -1,8 +1,11 @@
 import React, { Component } from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
-import { Container } from "react-bootstrap"
 import Navbar from "../components/LandingPage/navBar/Navbar"
 import FirstSection from "../components/LandingPage/FirstSection/FirstSection"
+import SecondSection from "../components/LandingPage/SecondSection/SecondSection"
+import ThirdSection from "../components/LandingPage/ThirdSection/ThirdSection"
+import FourthSection from "../components/LandingPage/FourthSection/FourthSection"
+
 class landing extends Component {
   componentDidMount() {}
   constructor(props) {
@@ -20,6 +23,9 @@ class landing extends Component {
       <>
         <Navbar />
         <FirstSection />
+        <SecondSection />
+        <ThirdSection />
+        <FourthSection />
       </>
     )
   }

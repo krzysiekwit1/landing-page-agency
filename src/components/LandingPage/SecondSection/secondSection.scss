@@ -1,0 +1,92 @@
+@import "../../../styles/styles.scss";
+
+.second-section-container {
+  margin-top: 10vh;
+  background-color: $color-backgroundGrey;
+  background: linear-gradient(
+    90deg,
+    rgba(50, 50, 50, 1) 5%,
+    rgb(27, 27, 27) 42%,
+    rgb(19, 19, 19) 77%
+  );
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: $color-white;
+  }
+  h1 {
+    @include media-breakpoint-down(md) {
+      font-size: 30px;
+    }
+  }
+  h4 {
+    @include media-breakpoint-down(md) {
+      font-size: 20px;
+    }
+  }
+  &__chartImage {
+    width: 60%;
+    @include media-breakpoint-down(sm) {
+      width: 40%;
+    }
+  }
+  &__callCenterImage {
+    width: 80%;
+    @include media-breakpoint-down(sm) {
+      width: 60%;
+    }
+  }
+  &__aiImage {
+    width: 80%;
+    @include media-breakpoint-down(sm) {
+      width: 60%;
+    }
+  }
+  &__first-element {
+    opacity: 0;
+  }
+  &__second-element {
+    opacity: 0;
+  }
+  &__third-element {
+    opacity: 0;
+  }
+
+  &__first-element-active {
+    opacity: 1;
+    animation: apearFromRight 1.5s ease-in-out;
+  }
+  &__second-element-active {
+    opacity: 1;
+    animation: apearFromLeft 1.5s ease-in-out;
+  }
+  &__third-element-active {
+    opacity: 1;
+    animation: apearFromRight 1.5s ease-in-out;
+  }
+}
+@keyframes apearFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10vw);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
+@keyframes apearFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10vw);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
