@@ -4,7 +4,22 @@ import { gsap } from "gsap"
 import "./thirdSection.scss"
 const ThirdSection = () => {
   const partnersRef = useRef(null)
-
+  const partnersArray = [
+    { nick: "Nick", subs: "180k" },
+    { nick: "Nick", subs: "120k" },
+    { nick: "Nick", subs: "150k" },
+    { nick: "Nick", subs: "170k" },
+    { nick: "Nick", subs: "130k" },
+    { nick: "Nick", subs: "160k" },
+    { nick: "Nick", subs: "120k" },
+    { nick: "Nick", subs: "130k" },
+    { nick: "Nick", subs: "140k" },
+    { nick: "Nick", subs: "150k" },
+    { nick: "Nick", subs: "160k" },
+    { nick: "Nick", subs: "170k" },
+    { nick: "Nick", subs: "180k" },
+    { nick: "Nick", subs: "190k" },
+  ]
   useEffect(() => {
     const partners = partnersRef.current.querySelectorAll(".partner-container")
     let partnerWidth = window.innerWidth * 0.17
@@ -61,87 +76,19 @@ const ThirdSection = () => {
       </Row>
       <Row className="third-section-container" id="thirdSection">
         <div className="partners-container" ref={partnersRef}>
-          <div className="partner-container">
-            <div className="image-container">
-              <div className="image-container__img"></div>
+          {partnersArray.map(partner => (
+            <div className="partner-container">
+              <div className="image-container">
+                <div className="image-container__img"></div>
+              </div>
+              <div className="description-container">
+                <h2 className="description-container__nick">{partner.nick}</h2>
+                <h4 className="description-container__sub-count">
+                  Subs:{partner.subs}
+                </h4>
+              </div>
             </div>
-            <div className="description-container">
-              <h2 className="description-container__nick pt-1">Nick</h2>
-              <h4 className="description-container__sub-count">Subs:120k </h4>
-            </div>
-          </div>
-          <div className="partner-container">
-            <div className="image-container">
-              <div className="image-container__img"></div>
-            </div>
-            <div className="description-container">
-              <h2 className="description-container__nick">Nick</h2>
-              <h4 className="description-container__sub-count">Subs:120k </h4>
-            </div>
-          </div>
-          <div className="partner-container">
-            <div className="image-container">
-              <div className="image-container__img"></div>
-            </div>
-            <div className="description-container">
-              <h2 className="description-container__nick">Nick</h2>
-              <h4 className="description-container__sub-count">Subs:120k </h4>
-            </div>
-          </div>
-          <div className="partner-container">
-            <div className="image-container">
-              <div className="image-container__img"></div>
-            </div>
-            <div className="description-container">
-              <h2 className="description-container__nick">Nick</h2>
-              <h4 className="description-container__sub-count">Subs:120k </h4>
-            </div>
-          </div>
-          <div className="partner-container">
-            <div className="image-container">
-              <div className="image-container__img"></div>
-            </div>
-            <div className="description-container">
-              <h2 className="description-container__nick">Nick</h2>
-              <h4 className="description-container__sub-count">Subs:120k </h4>
-            </div>
-          </div>
-          <div className="partner-container">
-            <div className="image-container">
-              <div className="image-container__img"></div>
-            </div>
-            <div className="description-container">
-              <h2 className="description-container__nick">Nick</h2>
-              <h4 className="description-container__sub-count">Subs:120k </h4>
-            </div>
-          </div>
-          <div className="partner-container">
-            <div className="image-container">
-              <div className="image-container__img"></div>
-            </div>
-            <div className="description-container">
-              <h2 className="description-container__nick">Nick</h2>
-              <h4 className="description-container__sub-count">Subs:120k </h4>
-            </div>
-          </div>
-          <div className="partner-container">
-            <div className="image-container">
-              <div className="image-container__img"></div>
-            </div>
-            <div className="description-container">
-              <h2 className="description-container__nick">Nick</h2>
-              <h4 className="description-container__sub-count">Subs:120k </h4>
-            </div>
-          </div>
-          <div className="partner-container">
-            <div className="image-container">
-              <div className="image-container__img"></div>
-            </div>
-            <div className="description-container">
-              <h2 className="description-container__nick">Nick</h2>
-              <h4 className="description-container__sub-count">Subs:120k </h4>
-            </div>
-          </div>
+          ))}
         </div>
       </Row>
     </>
